@@ -11,9 +11,9 @@ module GmailXoauth
     
     # +user+ is an email address: roger@gmail.com
     # +oauth2_token+ is the OAuth2 token
-    def initialize(user, oauth2_token)
-      @user = user
-      @oauth2_token = oauth2_token
+    def initialize(*args)
+      @user = args[0]
+      @oauth2_token = args[1]
     end
     
     include OauthString
